@@ -6,16 +6,28 @@
 // passed to it.
 // - If it's an empty string, return `undefined`
 // - If it's a number, return `undefined`
+// let expect = lastCharacter;
 
 function lastCharacter(str) {
   /* Your code here */
+  if (!isNaN(str)) {
+    return undefined;
+  } else if (str.charAt(str.length - 1) == "") {
+    return undefined;
+  } else {
+    return str.charAt(str.length - 1);
+  }
 }
 
 // Step 2
 // You're given 1 test case. Add 4 more, making sure to cover all of the
 // conditions specified above (don't forget empty string and number!!)
 
-expect(lastCharacter('max'), 'x');
+expect(lastCharacter("max"), "x");
+expect(lastCharacter(" "), 5);
+expect(lastCharacter(6), 6);
+expect(lastCharacter("batman"), undefined);
+expect(lastCharacter("john"), "f");
 
 // Add 4 more test cases here!
 // 🌠 NOTE 🌠
@@ -34,7 +46,7 @@ expect(lastCharacter('max'), 'x');
  */
 function expect(result, value) {
   if (result === value) {
-    console.log('✅ Test succeeded');
+    console.log("✅ Test succeeded");
   } else {
     console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }

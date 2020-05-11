@@ -1,4 +1,4 @@
-let verifyEquals = require('../../assets/verify-equals');
+let verifyEquals = require("../../assets/verify-equals");
 
 // Problem 4
 // ---------
@@ -11,12 +11,21 @@ let verifyEquals = require('../../assets/verify-equals');
 // getLetterAtIndex("abc", 0);   // a
 
 function getLetterAtIndex(arr) {
-  // Your code here
-}
+// Your code here
+const position = arr[0].charAt(arr[1]);
+
+// console.log(position);
+
+//   if (position.charAt(1) == " ") {
+//     return undefined;
+//   } else {
+//     return position;
+//   }
+// }
 
 // Add 6 more test cases
-expect(getLetterAtIndex('hello', 4), 'o');
-expect(getLetterAtIndex('goodbye', 0), 'g');
+expect(getLetterAtIndex("hello", 4), "o");
+expect(getLetterAtIndex("goodbye", 0), "g");
 
 /**
  * -------------------------------------------------------------------
@@ -25,7 +34,7 @@ expect(getLetterAtIndex('goodbye', 0), 'g');
  */
 function expect(result, value) {
   if (result === value) {
-    console.log('✅ Test succeeded');
+    console.log("✅ Test succeeded");
   } else {
     console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }

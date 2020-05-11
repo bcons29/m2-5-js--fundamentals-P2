@@ -14,3 +14,4 @@
 // Guidelines
 // - write only one event listener
 // - use a switch statement
+const btnList1 = document.getElementById("btn-list1");
